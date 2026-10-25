@@ -1,0 +1,241 @@
+.app-shell {
+  width: min(100% - 40px, 880px);
+  margin: 0 auto;
+  padding: 64px 0 48px;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: var(--text-heading);
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.intro {
+  max-width: 560px;
+  margin-top: 14px;
+  color: var(--text-muted);
+}
+
+.prescription-card {
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 18px 55px rgb(28 41 61 / 7%);
+}
+
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.form-heading h2 {
+  margin: 0 0 6px;
+  color: var(--text-heading);
+  font-size: 1.25rem;
+}
+
+.form-heading p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.eye-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.eye-section {
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.eye-section legend {
+  padding: 0 8px;
+  color: var(--text-heading);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.field {
+  min-width: 0;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--text-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.field-unit {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-heading);
+  font: inherit;
+  font-size: 0.9375rem;
+  box-sizing: border-box;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.field input:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.field input:focus-visible {
+  border-color: var(--accent);
+}
+
+.field-invalid input {
+  border-color: var(--danger);
+}
+
+.field-error {
+  margin-top: 6px;
+  color: var(--danger);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.range-note,
+.disclaimer {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.button {
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.button-primary:hover {
+  background: var(--accent-hover);
+}
+
+.button-secondary {
+  border-color: var(--border-strong);
+  background: var(--surface);
+  color: var(--text-heading);
+}
+
+.button-secondary:hover {
+  background: var(--surface-muted);
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 12px 14px;
+  border: 1px solid var(--success-border);
+  border-radius: 8px;
+  background: var(--success-bg);
+  color: var(--success);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.disclaimer {
+  margin: 16px 2px 0;
+}
+
+@media (max-width: 680px) {
+  .app-shell {
+    width: min(100% - 28px, 480px);
+    padding-top: 40px;
+  }
+
+  .prescription-card {
+    padding: 22px 18px;
+  }
+
+  .eye-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-actions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 380px) {
+  .field-grid {
+    gap: 8px;
+  }
+
+  .eye-section {
+    padding: 16px 12px;
+  }
+}
